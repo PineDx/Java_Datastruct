@@ -54,7 +54,6 @@ public class LinkedList {
             throw new Exception("参数错误");
         }
         index(i);
-
         Node n = new Node(obj);
         n.setNext(current.getNext());
         current.setNext(n);
