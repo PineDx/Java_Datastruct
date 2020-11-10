@@ -20,7 +20,9 @@ public class SortTest {
             System.out.print("排序前:");
             sortTool.ScanArr(arr);
 
+            // 冒泡排序
 //            BubbleSort sort = new BubbleSort();
+            // 选择排序
             SelectSort sort = new SelectSort();
             arr = sort.sort(arr);
             System.out.print("排序后:");
