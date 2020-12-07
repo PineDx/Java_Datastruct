@@ -1,9 +1,6 @@
 package Test;
 
-import algorithm.sort.BubbleSort;
-import algorithm.sort.InsertionSort;
-import algorithm.sort.MergeSort;
-import algorithm.sort.SelectSort;
+import algorithm.sort.*;
 import algorithm.tool.SortTool;
 
 /**
@@ -17,7 +14,7 @@ public class SortTest {
     public static void main(String[] args) {
 
 
-            SortTool sortTool = new SortTool(15, 0 ,1000);
+            SortTool sortTool = new SortTool(100, 0 ,1000);
             int[] arr = sortTool.getArrayInt();
             System.out.print("排序前:");
             sortTool.ScanArr(arr);
@@ -28,9 +25,11 @@ public class SortTest {
             // 插入排序
 //            InsertionSort sort = new InsertionSort();
             // 归并排序
-            MergeSort sort = new MergeSort();
+//            MergeSort sort = new MergeSort();
 //            arr = sort.sort(arr);
-            arr = sort.sortBU(arr);
+            // 快速排序
+            QuickSort sort = new QuickSort();
+            arr = sort.sort(arr);
 
             System.out.print("排序后:");
             sortTool.ScanArr(arr);
