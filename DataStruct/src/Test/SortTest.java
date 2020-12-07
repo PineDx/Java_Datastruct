@@ -2,14 +2,9 @@ package Test;
 
 import algorithm.sort.BubbleSort;
 import algorithm.sort.InsertionSort;
+import algorithm.sort.MergeSort;
 import algorithm.sort.SelectSort;
 import algorithm.tool.SortTool;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.logging.SimpleFormatter;
 
 /**
  * <功能简述>
@@ -22,7 +17,7 @@ public class SortTest {
     public static void main(String[] args) {
 
 
-            SortTool sortTool = new SortTool(10, 0 ,100);
+            SortTool sortTool = new SortTool(15, 0 ,1000);
             int[] arr = sortTool.getArrayInt();
             System.out.print("排序前:");
             sortTool.ScanArr(arr);
@@ -31,8 +26,11 @@ public class SortTest {
             // 选择排序
 //            SelectSort sort = new SelectSort();
             // 插入排序
-            InsertionSort sort = new InsertionSort();
-            arr = sort.sort(arr);
+//            InsertionSort sort = new InsertionSort();
+            // 归并排序
+            MergeSort sort = new MergeSort();
+//            arr = sort.sort(arr);
+            arr = sort.sortBU(arr);
 
             System.out.print("排序后:");
             sortTool.ScanArr(arr);
