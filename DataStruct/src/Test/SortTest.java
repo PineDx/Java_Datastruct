@@ -14,7 +14,7 @@ public class SortTest {
     public static void main(String[] args) {
 
 
-            SortTool sortTool = new SortTool(100, 0 ,1000);
+            SortTool sortTool = new SortTool(10, 0 ,100);
             int[] arr = sortTool.getArrayInt();
             System.out.print("排序前:");
             sortTool.ScanArr(arr);
@@ -29,7 +29,7 @@ public class SortTest {
 //            arr = sort.sort(arr);
             // 快速排序
             QuickSort sort = new QuickSort();
-            arr = sort.sort(arr);
+            arr = sort.sort(arr, QuickSort.WAYSTHREE);
 
             System.out.print("排序后:");
             sortTool.ScanArr(arr);
