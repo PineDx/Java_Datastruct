@@ -1,4 +1,4 @@
-package Test.datastruct;
+package Test.datastruct.array;
 
 import algorithm.datastruct.SeqStack;
 

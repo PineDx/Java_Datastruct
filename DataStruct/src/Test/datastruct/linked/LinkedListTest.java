@@ -1,4 +1,4 @@
-package Test.datastruct;
+package Test.datastruct.linked;
 
 import algorithm.datastruct.linkedList.CyclicLinkedList;
 import algorithm.datastruct.linkedList.Node;

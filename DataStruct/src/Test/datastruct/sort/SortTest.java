@@ -1,4 +1,4 @@
-package Test;
+package Test.datastruct.sort;
 
 import algorithm.sort.*;
 import algorithm.tool.SortTool;
@@ -28,10 +28,13 @@ public class SortTest {
 //            MergeSort sort = new MergeSort();
 //            arr = sort.sort(arr);
             // 快速排序
-            QuickSort sort = new QuickSort();
-            arr = sort.sort(arr, QuickSort.WAYSTHREE);
+//            QuickSort sort = new QuickSort();
+//            arr = sort.sort(arr, QuickSort.WAYSTHREE);
+            // 堆排序
+            HeapSort sort = new HeapSort();
+            arr = sort.sort(arr, HeapSort.NORMAL);
 
-            System.out.print("排序后:");
+        System.out.print("排序后:");
             sortTool.ScanArr(arr);
     }
 }

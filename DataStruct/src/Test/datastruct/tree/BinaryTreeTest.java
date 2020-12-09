@@ -1,4 +1,4 @@
-package Test.datastruct;
+package Test.datastruct.tree;
 
 import algorithm.datastruct.tree.binary_tree.BiTree;
 

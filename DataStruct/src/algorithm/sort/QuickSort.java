@@ -1,8 +1,8 @@
 package algorithm.sort;
 
 /**
- * <功能简述>
- * <功能详细描述>
+ * <快速排序>
+ * <时间复杂度  O(nlogn)>
  *
  * @Author: Songlin
  * @create: 2020/11/19-22:22
@@ -12,6 +12,7 @@ public class QuickSort {
     public static final int ORDER = 2;
     public static final int REPERT = 3;
     public static final int WAYSTHREE = 4;
+
     public int[] sort(int [] array, int model){
         switch (model){
             case NORMAL:
