@@ -1,4 +1,4 @@
-package algorithm.datastruct.maxheap;
+package algorithm.datastruct.heap;
 
 /**
  * Title: 最大堆

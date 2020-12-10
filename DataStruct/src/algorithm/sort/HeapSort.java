@@ -1,6 +1,6 @@
 package algorithm.sort;
 
-import algorithm.datastruct.maxheap.MaxHeap;
+import algorithm.datastruct.heap.MaxHeap;
 
 /**
  * Title:
