@@ -1,6 +1,6 @@
 package algorithm.sort;
 
-import algorithm.datastruct.maxheap.MaxHeap;
+import algorithm.datastruct.heap.MaxHeap;
 
 /**
  * Title:
@@ -11,7 +11,7 @@ import algorithm.datastruct.maxheap.MaxHeap;
  */
 public class HeapSort {
     public static final int NORMAL = 1;
-    public static final int ORDER = 2;
+    public static final int STAND = 2;
     public static final int REPERT = 3;
     public static final int WAYSTHREE = 4;
 
@@ -21,7 +21,9 @@ public class HeapSort {
             case NORMAL:
                 heapSort(arr);
                 break;
-//            case ORDER:
+            case STAND:
+                heapSortStand(arr);
+                break;
 //            case REPERT:
 //                quicksortOrder(array, 0 ,array.length - 1);
 //                break;
@@ -32,10 +34,17 @@ public class HeapSort {
         return arr;
     }
 
+    // 最大堆排序
     private void heapSort(int[] arr) {
         MaxHeap heap = new MaxHeap(arr, arr.length);
         for (int i = 0; i < arr.length; i++) {
             arr[i] = heap.extractMax();
         }
+    }
+
+    // 原地堆排序
+    private void heapSortStand(int[] arr) {
+        MaxHeap heap = new MaxHeap();
+        heap.heapSortStand(arr, arr.length);
     }
 }

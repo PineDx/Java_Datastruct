@@ -1,6 +1,6 @@
 package Test.datastruct.tree;
 
-import algorithm.datastruct.maxheap.MaxHeap;
+import algorithm.datastruct.heap.MaxHeap;
 import algorithm.tool.SortTool;
 
 /**
