@@ -1,5 +1,7 @@
 package algorithm.datastruct.heap;
 
+import algorithm.tool.SortTool;
+
 /**
  * Title: 最大堆
  * Desc: 用线性数组表示堆
@@ -12,6 +14,9 @@ public class MaxHeap {
     private int count;
     private int cap;
 
+    public MaxHeap() {
+
+    }
     public MaxHeap(int capacity) {
         if (capacity > 0) {
             arr = new int[capacity+1];
@@ -34,6 +39,7 @@ public class MaxHeap {
             arr[i+1] = array[i];
 
         count = capacity;
+        // 对第一个不是叶子节点的节点进行shiftDown操作
         for (int i = count/2 ; i >= 1; i--) {
             shiftDown(i);
         }
@@ -94,6 +100,36 @@ public class MaxHeap {
         }
     }
 
+    // 原地堆排序 heapify 操作
+    public void heapSortStand(int[] arr, int n) {
+        // heapify
+        for ( int i = (n-1)/2 ; i >= 0 ; i--){
+            standShiftDown(arr, n , i );
+        }
+        // heapify之后数组第一个值就是最大的，从倒数第二个值开始shiftdown
+        for ( int i = n-1 ; i > 0; i-- ){
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+            standShiftDown(arr, i , 0);
+        }
+
+    }
+    // 原地堆 shiftDown
+    private void standShiftDown(int[] arr, int n , int k) {
+        int temp;
+        while ( 2*k+1 < n) {
+            int j = 2*k + 1;
+            if ( j + 1 < n && arr[j+1] > arr[j]) {
+                j += 1;
+            }
+            if (arr[k] >= arr[j]) break;
+            temp = arr[k];
+            arr[k] = arr[j];
+            arr[j] = temp;
+            k = j;
+        }
+    }
     public void ScanHeap() {
         for (int i :
                 arr) {

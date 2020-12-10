@@ -32,7 +32,7 @@ public class SortTest {
 //            arr = sort.sort(arr, QuickSort.WAYSTHREE);
             // 堆排序
             HeapSort sort = new HeapSort();
-            arr = sort.sort(arr, HeapSort.NORMAL);
+            arr = sort.sort(arr, HeapSort.STAND);
 
         System.out.print("排序后:");
             sortTool.ScanArr(arr);
