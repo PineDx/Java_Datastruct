@@ -1,5 +1,6 @@
 package Test.datastruct.tree;
 
+import algorithm.datastruct.heap.IndexMaxHeap;
 import algorithm.datastruct.heap.MaxHeap;
 import algorithm.tool.SortTool;
 
@@ -25,6 +26,17 @@ public class MaxHeapTest {
         System.out.println("\n");
         while (!heap.isEmpty()) {
             System.out.print(heap.extractMax() + " ");
+        }
+
+        IndexMaxHeap indexheap = new IndexMaxHeap(10);
+
+        for (int i = 0; i < arr.length ; i++ ) {
+            indexheap.insert(i, arr[i]);
+        }
+
+        System.out.println("索引最大堆的实现:");
+        while (!indexheap.isEmpty()) {
+            System.out.print(indexheap.extractMax() + " ");
         }
     }
 }
