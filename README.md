@@ -19,7 +19,11 @@
 > *algorithm \ sort*
 
 ---
+> Java 设计模式
+> 
+> *algorithm \ design*
 
+---
 >此项目所用工具类
 >
 >*algorithm \ tool*
