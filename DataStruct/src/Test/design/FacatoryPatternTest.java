@@ -1,4 +1,4 @@
-package algorithm.design.creation.FactoryPattern;
+package Test.design;
 
 import algorithm.design.creation.FactoryPattern.FactoryTrans.TransportFactory;
 import algorithm.design.creation.FactoryPattern.FactoryTrans.mode.TransportMode;
@@ -10,7 +10,7 @@ import algorithm.design.creation.FactoryPattern.FactoryTrans.mode.TransportMode;
  * @Author: Songlin
  * @create: 2020/12/17-19:32
  */
-public class FacatoryTest {
+public class FacatoryPatternTest {
     public static void main(String[] args) {
         // 使用工厂类
         TransportFactory transportFactory = new TransportFactory();
