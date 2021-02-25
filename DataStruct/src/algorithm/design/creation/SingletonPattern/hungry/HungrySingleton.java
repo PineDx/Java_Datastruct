@@ -1,5 +1,7 @@
 package algorithm.design.creation.SingletonPattern.hungry;
 
+import java.util.AbstractList;
+
 /**
  * Title: 饿汉式单例
  * Desc:
@@ -22,4 +24,6 @@ public class HungrySingleton {
     public static HungrySingleton getInstance() {
         return hungrySingleton;
     }
+
+
 }
